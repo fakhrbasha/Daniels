@@ -1,0 +1,575 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all 0.5s;
+
+}
+:root{
+    --font-mon : "Montserrat", sans-serif;
+    --main-color : #000;
+    --ani: 0.5s ease-in-out;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 56px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+}
+.head{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)) ,url('./imgs/bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment :local;
+}
+html{
+    scroll-padding: 70px;
+}
+.navbar{
+    z-index: 9999;
+
+}
+.content{
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.content h5{
+    font-size: 30px;
+}
+.content h3{
+    font-size: 30px;
+    font-weight: 100;
+} 
+.content h3 span{
+    font-weight: 400;
+}
+.ico i{
+    font-size: 15px;
+}
+.txt{
+    margin-left: -100px;
+}
+.activee{
+    position: relative;
+}
+.activee::after{
+    content: "";
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+    width: 0%;
+    height: 2px;
+    bottom: -1px;
+    position: absolute;
+        transition: 0.3s ease-in-out;
+}
+
+nav .active{
+    position: relative !important;
+}
+nav .active::after{
+    content: "";
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 2px;
+    bottom: -1px;
+    position: absolute;
+        transition: 0.3s ease-in-out;
+}
+
+.pro {
+    font-size: 12px;
+    font-weight: 500;
+    .name-prog {
+        padding-left: 30px;
+    }
+    .pers{
+        padding-right: 30px;
+    }
+}
+
+.profile-container {
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.dotted-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 300px;
+    background-image: radial-gradient(#ccc 1px, transparent 1px);
+    background-size: 10px 10px;
+}
+.profile-img {
+    position: relative;
+    z-index: 5;
+    max-width: 100%;
+    height: auto;
+}
+.txt{
+    margin-left: 1px;
+}
+.bot{
+    width: 150px;
+    height: 40px;
+    font-size: 12px;
+    color: white;
+    background-color: black;
+    &:hover{
+        color: #000;
+        background-color: rgb(255, 255, 255);
+    }
+}
+.btn{
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+}
+
+
+
+/* -------------------- ----------------- --------------- service ------------ -------------- --------------- */
+
+.service{
+    margin-top: 60px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    background-color: rgb(247, 247, 247);
+}
+.service h3{
+    font-size: 45px;
+    font-weight: 800;
+}
+.icon:hover .outer i {
+    color: white;
+}
+.icon:hover .outer {
+    background-color: black;
+}
+
+.outer{
+    transition: 0.5s;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: rgb(247, 247, 247);
+}
+.outer i{
+    padding-top: 15px;
+}
+.xss{
+    /* width: 400px; */
+    height: 300px;
+}
+.textserv{
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    overflow: hidden;
+}
+.textserv h3{
+    position: relative;
+    z-index: 5;
+    max-width: 100%;
+    height: auto;
+}
+.dotteed-bg{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    height: 50px;
+    background-image: radial-gradient(#ccc 1px, transparent 1px);
+    background-size: 10px 10px;
+}
+
+/* ---------- -------- ------------ ------- portfolio ----------- ------- ----- --- */
+
+.Portfolio{
+    padding-top: 40px;
+}
+.Portfolio h3{
+    font-size: 45px;
+    font-weight: 800;
+    padding-bottom: 30px;
+}
+.textprot{
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    overflow: hidden;
+}
+.textprot h3{
+    position: relative;
+    z-index: 5;
+    height: auto;
+}
+.dotteeed-bg{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 50px;
+    background-image: radial-gradient(#ccc 1px, transparent 1px);
+    background-size: 10px 10px;
+}
+
+
+
+.nav-pills .nav-link {
+  position: relative;
+  color: black;
+  font-weight: bold;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: transparent;
+    color: black;
+}
+.nav-pills .nav-link {
+  position: relative;
+  background-color: transparent;
+  color: black;
+  font-weight: bold;
+  transition: color 0.4s ease-in-out;
+}
+
+.nav-pills .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.4s ease-in-out;
+}
+
+.nav-pills .nav-link.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-pills .nav-link:hover {
+  color: black;
+}
+
+.img-fluid{
+    width: 400px;
+}
+.imag{
+    position: relative;
+    overflow: hidden;
+    background-color: #eee;
+    transition: transform 1s ease-in-out;
+}
+.contentt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  margin: 10px;
+  transform: scale(0);
+  transform-origin: center;
+  transition:  0.7s ;
+
+}
+
+.imag:hover .contentt {
+  transform: scale(1);
+}
+.innerr{
+    width: 40px;
+    height:40px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 50%;
+    margin-left: 5px;
+    transition: 0.3s;
+    &:hover{
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+    }
+}
+.innerr i{
+    padding-top: 11px;
+}
+/*  */
+.Testimonials{
+    margin-top: 100px;
+    background-color: rgb(247, 247, 247);
+}
+.txtT h3{
+    padding: 80px 0;
+    text-align: center;
+    z-index: 5;
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+
+}
+.txtT{
+    position: relative;
+}
+
+.dotteeeed-bg{
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 50px;
+    background-image: radial-gradient(#ccc 1px, transparent 1px);
+    background-size: 10px 10px;
+}
+.carousel-indicators [data-bs-target]{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: rgb(214, 214, 214);
+    &:hover{
+        background-color: rgb(134, 151, 145);
+    }
+}
+.carousel-indicators .active{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: rgb(134, 151, 145);
+}
+.carouseli{
+    padding-bottom: 80px;
+}
+
+/*  */
+
+.group-total{
+    padding: 80px;
+    flex-direction: column;
+}
+
+/*  */
+.our-team{
+    text-align: center;
+
+background-color: rgb(247, 247, 247);
+
+}
+.txtteam{
+    position: relative;
+}
+.our-team h3{
+    padding: 80px 0;
+    text-align: center;
+    z-index: 5;
+    font-size:50px;
+    font-weight: bold;
+    position: relative;
+}
+.dotteeeeed-bg{
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 50px;
+    background-image: radial-gradient(#ccc 1px, transparent 1px);
+    background-size: 10px 10px;
+}
+.photo-team{
+    position: relative;
+    transition: 0.5s;
+
+}
+.boxaya{
+    opacity: 0.9;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    opacity: 0;
+    transform: rotateY(110deg);
+    transition: 0.5s ease-in-out;
+    scale: 0.5;
+
+    
+}
+.photo-team:hover > .boxaya{
+        transform: rotateY(0turn);
+        scale: 1;
+        opacity: 0.9;
+}
+.photo-team {
+    overflow: hidden;
+    height: auto;
+    transition: 0.5s;
+}
+.phot img{
+    transition: 0.5s;
+}
+.photo-team:hover > .phot img{
+        transition: 0.5s;
+    width: 100%;
+    transform: scale(1.2);
+}
+
+
+.out{
+    width: 30px;
+    height: 30px;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    &:hover{
+        background-color: #fff;
+        color: black;
+        border:1px solid black;
+        cursor: pointer;
+    }
+    
+}
+/*  */
+.contentus{
+    padding-bottom: 100px;
+}
+.txtcontent {
+    position: relative;
+}
+.txtcontent h3 {
+    padding: 80px 0;
+    text-align: center;
+    z-index: 5;
+    font-size:50px;
+    font-weight: bold;
+    position: relative;
+}
+.dotteeeeeed-bg{
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 50px;
+    background-image: radial-gradient(#ccc 1px, transparent 1px);
+    background-size: 10px 10px;
+}
+
+.outerc{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(244, 244, 244);
+    transition: var(--ani);
+    &:hover{
+        color: white;
+        background-color: black;
+    }
+}
+.contentForm input:focus,
+.contentForm textarea:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+.btn:hover{
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+}
+
+/*  */
+.footer {
+  padding: 20px 0;
+}
+.footer p{
+    font-size: 12px;
+}
+
+
+/*                              Media Query                         */
+
+
+/* small devices */
+@media (min-width: 640px){
+
+}
+/* medium devices */
+@media (min-width: 768px){
+
+}
+/* large devices */
+@media (min-width: 1024px){
+    .content h5{
+    font-size: 70px;
+}
+.content h3{
+    font-size: 70px;
+    font-weight: 100;
+} 
+.content h3 span{
+    font-weight: 400;
+}
+.txt{
+    margin-left: -50px;
+}
+.profile-img {
+    max-width: 75%;
+    height: auto;
+}
+.btn{
+    width: 150px;
+    height: 40px;
+    font-size: 12px;
+}
+.serc{
+    padding-left: 30px;
+}
+    .group-total{
+        flex-direction: row;
+    }
+    .xss{
+    width: 400px;
+}
+
+}
+/* extra large devices */
+@media (min-width: 1280px){
+
+}
+/* extra extra large devices */
+@media (min-width: 1536px){
+
+}
